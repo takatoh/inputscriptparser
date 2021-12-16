@@ -1,4 +1,24 @@
+from lark import Lark
+from lark.exceptions import UnexpectedInput
 from lark.visitors import Interpreter
+from inputscriptparser.grammer import SCRIPT_GRAMMER
+
+
+class Parser():
+    def __init__(self):
+        self.parser = Lark(SCRIPT_GRAMMER, start="script")
+
+    def parse(self, input_data):
+        try:
+            tree = self.parser.parse(input_data)
+        except UnexpectedInput as e:
+            context = e.get_context(input_data)
+            print(f"Syntax error:  line = {e.line}  column = {e.column}\n")
+            print(context)
+            exit(1)
+
+        script = ScriptInterpreter().visit(tree)
+        return script
 
 
 class ScriptInterpreter(Interpreter):

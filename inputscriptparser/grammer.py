@@ -1,4 +1,4 @@
-?script : statement+
+SCRIPT_GRAMMER = '''?script : statement+
 
 statement : line continued*
 
@@ -55,3 +55,4 @@ COMMENT_INLINE : WS_INLINE? CPP_COMMENT
 
 %ignore COMMENT
 %ignore COMMENT_INLINE
+'''

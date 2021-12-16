@@ -1,4 +1,4 @@
-from inputscriptparser.parser import Parser
+from inputscriptparser.parsers import Parser
 import sys
 
 

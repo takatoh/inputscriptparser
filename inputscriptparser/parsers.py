@@ -1,7 +1,7 @@
 from lark import Lark
 from lark.exceptions import UnexpectedInput
 from lark.visitors import Interpreter
-from inputscriptparser.grammer import SCRIPT_GRAMMER
+from inputscriptparser.grammers import SCRIPT_GRAMMER
 
 
 class Parser():

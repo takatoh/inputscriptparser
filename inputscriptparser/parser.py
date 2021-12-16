@@ -20,10 +20,10 @@ def main():
         exit(1)
 
     #print(tree.pretty())
-    MyInterpreter().visit(tree)
+    ScriptInterpreter().visit(tree)
 
 
-class MyInterpreter(Interpreter):
+class ScriptInterpreter(Interpreter):
     def script(self, tree):
         print("SCRIPT")
         for c in tree.children:

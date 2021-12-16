@@ -44,6 +44,24 @@ url = "http://localhost:8800/simple"
 reference = "local"
 
 [[package]]
+name = "lark"
+version = "0.11.3"
+description = "a modern parsing library"
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.extras]
+atomic_cache = ["atomicwrites"]
+nearley = ["js2py"]
+regex = ["regex"]
+
+[package.source]
+type = "legacy"
+url = "http://localhost:8800/simple"
+reference = "local"
+
+[[package]]
 name = "more-itertools"
 version = "8.10.0"
 description = "More routines for operating on iterables, beyond itertools"
@@ -160,7 +178,7 @@ reference = "local"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "e1d96ac13b24bcaa6072701745ceb18bed8b59efdb93ffe7c371160fc81ac2f9"
+content-hash = "8db9ee5f502beeca45558c9dbf1585ea6b0036993afb043b08010d0adc07c90a"
 
 [metadata.files]
 atomicwrites = [
@@ -171,6 +189,9 @@ attrs = [
 ]
 colorama = [
     {file = "colorama-0.4.4-py2.py3-none-any.whl", hash = "md5:1dcd07acf2b1875ed09428e1ddf7e028"},
+]
+lark = [
+    {file = "lark-0.11.3.tar.gz", hash = "md5:e793401d573878414f0f6a723b068616"},
 ]
 more-itertools = [
     {file = "more_itertools-8.10.0-py3-none-any.whl", hash = "md5:37ef88eebaff7d5999d834c9e4442718"},

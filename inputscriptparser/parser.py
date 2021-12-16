@@ -20,16 +20,16 @@ def main():
         exit(1)
 
     #print(tree.pretty())
-    ScriptInterpreter().visit(tree)
+    script = ScriptInterpreter().visit(tree)
+    print("SCRIPT")
+    for (cmd, args) in script:
+        print("  COMMAND: " + cmd)
+        print("     ARGS: " + repr(args))
 
 
 class ScriptInterpreter(Interpreter):
     def script(self, tree):
-        print("SCRIPT")
-        for c in tree.children:
-            (cmd, args) = self.visit(c)
-            print("    COMMAND: " + cmd)
-            print("    ARGS:    " + repr(args))
+        return [self.visit(c) for c  in tree.children]
 
     def statement(self, tree):
         (cmd, args1) = self.visit(tree.children[0])

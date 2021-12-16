@@ -1,12 +1,12 @@
 from lark import Lark
 from lark.visitors import Interpreter
 from lark.exceptions import UnexpectedInput
+from inputscriptparser.grammer import SCRIPT_GRAMMER
 import sys
 
 
 def main():
-    with open("script5.lark", "r", encoding="utf-8") as grammar:
-        parser = Lark(grammar.read(), start="script")
+    parser = Lark(SCRIPT_GRAMMER, start="script")
 
     with open(sys.argv[1], "r") as f:
         input_data = f.read()

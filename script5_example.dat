@@ -1,0 +1,18 @@
+TITLE "example"
+ADD 1 2
+MUL
+    3
+//    5
+    7  8  
+    9
+// this line is comment.
+REPEAT "Hello!" 5  
+    // this is comment too.
+JOIN "Hell," "world!"  // in-line comment.
+ADD-2  5  .7e03
+NO-ARG-COMMAND
+COMMAND-WITH-KEYWORD
+    KW1  1
+    KW2  2
+    KW3  on
+    KW4  off

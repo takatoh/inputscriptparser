@@ -2,7 +2,7 @@ from lark import Lark
 from lark.exceptions import UnexpectedInput
 from lark.visitors import Interpreter
 from inputscriptparser.grammers import SCRIPT_GRAMMER
-from inputscriptparser.common import Keyword, _flatten
+from inputscriptparser.common import Keyword, flatten
 
 
 class Parser():
@@ -28,13 +28,13 @@ class ScriptInterpreter(Interpreter):
 
     def statement(self, tree):
         (cmd, args1) = self.visit(tree.children[0])
-        args2 = _flatten([ self.visit(a) for a in tree.children[1:] ])
+        args2 = flatten([ self.visit(a) for a in tree.children[1:] ])
         return (cmd, args1 + args2)
 
     def line(self, tree):
         cmd = self.visit(tree.children[0])
         if len(tree.children) > 1:
-            args = _flatten(self.visit(tree.children[1]))
+            args = flatten(self.visit(tree.children[1]))
         else:
             args = []
         return (cmd, args)

@@ -9,11 +9,11 @@ class Keyword():
         return f'Keyword<{self.val}>'
 
 
-def _flatten(lis):
+def flatten(lis):
     result = []
     for elem in lis:
         if isinstance(elem, list):
-            result += _flatten(elem)
+            result += flatten(elem)
         else:
             result.append(elem)
     return result

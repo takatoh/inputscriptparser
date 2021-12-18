@@ -7,14 +7,14 @@ from inputscriptparser.common import Keyword, flatten
 
 class Parser():
     def __init__(self):
-        self.parser = Lark(SCRIPT_GRAMMER, start="script")
+        self.parser = Lark(SCRIPT_GRAMMER, start='script')
 
     def parse(self, input_data):
         try:
             tree = self.parser.parse(input_data)
         except UnexpectedInput as e:
             context = e.get_context(input_data)
-            print(f"Syntax error:  line = {e.line}  column = {e.column}\n")
+            print(f'Syntax error:  line = {e.line}  column = {e.column}\n')
             print(context)
             exit(1)
 

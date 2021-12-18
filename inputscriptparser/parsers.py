@@ -2,6 +2,7 @@ from lark import Lark
 from lark.exceptions import UnexpectedInput
 from lark.visitors import Interpreter
 from inputscriptparser.grammers import SCRIPT_GRAMMER
+from inputscriptparser.common import Keyword, _flatten
 
 
 class Parser():
@@ -68,24 +69,3 @@ class ScriptInterpreter(Interpreter):
 
     def false(self, tree):
         return False
-
-
-class Keyword():
-    def __init__(self, val):
-        self.val = val
-
-    def __str__(self):
-        return f'Keyword<{self.val}>'
-
-    def __repr__(self):
-        return f'Keyword<{self.val}>'
-
-
-def _flatten(lis):
-    result = []
-    for elem in lis:
-        if isinstance(elem, list):
-            result += _flatten(elem)
-        else:
-            result.append(elem)
-    return result

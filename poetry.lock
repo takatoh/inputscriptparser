@@ -45,7 +45,7 @@ reference = "local"
 
 [[package]]
 name = "lark"
-version = "0.11.3"
+version = "1.0.0"
 description = "a modern parsing library"
 category = "main"
 optional = false
@@ -63,7 +63,7 @@ reference = "local"
 
 [[package]]
 name = "more-itertools"
-version = "8.10.0"
+version = "8.12.0"
 description = "More routines for operating on iterables, beyond itertools"
 category = "dev"
 optional = false
@@ -76,14 +76,14 @@ reference = "local"
 
 [[package]]
 name = "packaging"
-version = "21.0"
+version = "21.3"
 description = "Core utilities for Python packages"
 category = "dev"
 optional = false
 python-versions = ">=3.6"
 
 [package.dependencies]
-pyparsing = ">=2.0.2"
+pyparsing = ">=2.0.2,<3.0.5 || >3.0.5"
 
 [package.source]
 type = "legacy"
@@ -108,11 +108,11 @@ reference = "local"
 
 [[package]]
 name = "py"
-version = "1.10.0"
+version = "1.11.0"
 description = "library with cross-python path, ini-parsing, io, code, log facilities"
 category = "dev"
 optional = false
-python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 
 [package.source]
 type = "legacy"
@@ -121,7 +121,7 @@ reference = "local"
 
 [[package]]
 name = "pyparsing"
-version = "3.0.1"
+version = "3.0.6"
 description = "Python parsing module"
 category = "dev"
 optional = false
@@ -178,7 +178,7 @@ reference = "local"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "8db9ee5f502beeca45558c9dbf1585ea6b0036993afb043b08010d0adc07c90a"
+content-hash = "cae3cd359bcb27944879a02b9fab647106b40f594e0193ce3945b0731bad861f"
 
 [metadata.files]
 atomicwrites = [
@@ -191,22 +191,22 @@ colorama = [
     {file = "colorama-0.4.4-py2.py3-none-any.whl", hash = "md5:1dcd07acf2b1875ed09428e1ddf7e028"},
 ]
 lark = [
-    {file = "lark-0.11.3.tar.gz", hash = "md5:e793401d573878414f0f6a723b068616"},
+    {file = "lark-1.0.0-py2.py3-none-any.whl", hash = "md5:481fa6b0c979feffda959b2e51709e7e"},
 ]
 more-itertools = [
-    {file = "more_itertools-8.10.0-py3-none-any.whl", hash = "md5:37ef88eebaff7d5999d834c9e4442718"},
+    {file = "more_itertools-8.12.0-py3-none-any.whl", hash = "md5:24ad863d3d4d6724d292c344e0e5ab76"},
 ]
 packaging = [
-    {file = "packaging-21.0-py3-none-any.whl", hash = "md5:650984360b6e8c0946f0b5a13751b988"},
+    {file = "packaging-21.3-py3-none-any.whl", hash = "md5:670a7057642064a747bd8274b24eb3f9"},
 ]
 pluggy = [
     {file = "pluggy-0.13.1-py2.py3-none-any.whl", hash = "md5:32a771dc4df48273d4967e5aab043653"},
 ]
 py = [
-    {file = "py-1.10.0-py2.py3-none-any.whl", hash = "md5:025a8dee6cd7e51790536da11d4a5aff"},
+    {file = "py-1.11.0-py2.py3-none-any.whl", hash = "md5:52d444d43edb21938fad6010a2134cc3"},
 ]
 pyparsing = [
-    {file = "pyparsing-3.0.1-py3-none-any.whl", hash = "md5:d50abb645ade61d1aad60a1e25b8abf2"},
+    {file = "pyparsing-3.0.6-py3-none-any.whl", hash = "md5:1184c1028b8211c060442ed847110e8b"},
 ]
 pytest = [
     {file = "pytest-5.4.3-py3-none-any.whl", hash = "md5:3e3d11ab0c0d3ffd87bd4aedd02afaef"},

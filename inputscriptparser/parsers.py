@@ -1,6 +1,6 @@
 from lark import Lark
 from lark.exceptions import UnexpectedInput
-from lark.visitors import Interpreter
+from lark.visitors import Interpreter, Transformer
 from inputscriptparser.grammers import SCRIPT_GRAMMER
 from inputscriptparser.common import Keyword, flatten
 
@@ -68,4 +68,60 @@ class ScriptInterpreter(Interpreter):
         return True
 
     def false(self, tree):
+        return False
+
+
+class ScriptTransformer(Transformer):
+    def script(self, tokens):
+        return list(tokens)
+
+    def statement(self, tokens):
+        (cmd, args) = tokens[0]
+        if len(tokens) > 1:
+            args2 = list(tokens[1:])
+        return (cmd, flatten(args + args2))
+
+    def line(self, tokens):
+        if len(tokens) == 1:
+            (cmd,) = tokens
+            args = []
+        else:
+            (cmd, args) = tokens
+        return (cmd, args)
+
+    def continued(self, tokens):
+        (args,) = tokens
+        return args
+
+    def command(self, tokens):
+        (cmd,) = tokens
+        return cmd
+
+    def arglist(self, tokens):
+        return list(tokens)
+
+    def arg(self, tokens):
+        (a,) = tokens
+        return a
+
+    def number(self, tokens):
+        (num,) = tokens
+        return float(num)
+
+    def string(self, tokens):
+        (s,) = tokens
+        return s
+
+    def keyword(self, tokens):
+        (kw,) = tokens
+        return Keyword(kw)
+
+    def boolean(self, tokens):
+        (b,) = tokens
+        return b
+
+    def true(self, tokens):
+        return True
+
+    def false(self, tokens):
         return False

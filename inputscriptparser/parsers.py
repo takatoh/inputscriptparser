@@ -18,7 +18,8 @@ class Parser():
             print(context)
             exit(1)
 
-        script = ScriptInterpreter().visit(tree)
+#        script = ScriptInterpreter().visit(tree)
+        script = ScriptTransformer().transform(tree)
         return script
 
 

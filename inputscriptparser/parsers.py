@@ -79,8 +79,8 @@ class ScriptTransformer(Transformer):
     def statement(self, tokens):
         (cmd, args) = tokens[0]
         if len(tokens) > 1:
-            args2 = list(tokens[1:])
-        return (cmd, flatten(args + args2))
+            args.extend(tokens[1:])
+        return (cmd, flatten(args))
 
     def line(self, tokens):
         if len(tokens) == 1:
@@ -111,7 +111,7 @@ class ScriptTransformer(Transformer):
 
     def string(self, tokens):
         (s,) = tokens
-        return s
+        return s.strip('"')
 
     def keyword(self, tokens):
         (kw,) = tokens

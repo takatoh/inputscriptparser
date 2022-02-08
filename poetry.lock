@@ -13,17 +13,17 @@ reference = "local"
 
 [[package]]
 name = "attrs"
-version = "21.2.0"
+version = "21.4.0"
 description = "Classes Without Boilerplate"
 category = "dev"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 
 [package.extras]
-dev = ["coverage[toml] (>=5.0.2)", "hypothesis", "pympler", "pytest (>=4.3.0)", "six", "mypy", "pytest-mypy-plugins", "zope.interface", "furo", "sphinx", "sphinx-notfound-page", "pre-commit"]
+dev = ["coverage[toml] (>=5.0.2)", "hypothesis", "pympler", "pytest (>=4.3.0)", "six", "mypy", "pytest-mypy-plugins", "zope.interface", "furo", "sphinx", "sphinx-notfound-page", "pre-commit", "cloudpickle"]
 docs = ["furo", "sphinx", "zope.interface", "sphinx-notfound-page"]
-tests = ["coverage[toml] (>=5.0.2)", "hypothesis", "pympler", "pytest (>=4.3.0)", "six", "mypy", "pytest-mypy-plugins", "zope.interface"]
-tests_no_zope = ["coverage[toml] (>=5.0.2)", "hypothesis", "pympler", "pytest (>=4.3.0)", "six", "mypy", "pytest-mypy-plugins"]
+tests = ["coverage[toml] (>=5.0.2)", "hypothesis", "pympler", "pytest (>=4.3.0)", "six", "mypy", "pytest-mypy-plugins", "zope.interface", "cloudpickle"]
+tests_no_zope = ["coverage[toml] (>=5.0.2)", "hypothesis", "pympler", "pytest (>=4.3.0)", "six", "mypy", "pytest-mypy-plugins", "cloudpickle"]
 
 [package.source]
 type = "legacy"
@@ -45,7 +45,7 @@ reference = "local"
 
 [[package]]
 name = "lark"
-version = "1.0.0"
+version = "1.1.0"
 description = "a modern parsing library"
 category = "main"
 optional = false
@@ -121,7 +121,7 @@ reference = "local"
 
 [[package]]
 name = "pyparsing"
-version = "3.0.6"
+version = "3.0.7"
 description = "Python parsing module"
 category = "dev"
 optional = false
@@ -178,20 +178,20 @@ reference = "local"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "cae3cd359bcb27944879a02b9fab647106b40f594e0193ce3945b0731bad861f"
+content-hash = "746ddc05636964c6cc726639a58309bc79de3d0e2f3d0803bd638502a9fd9b36"
 
 [metadata.files]
 atomicwrites = [
     {file = "atomicwrites-1.4.0-py2.py3-none-any.whl", hash = "md5:acc030856f5d16b2aac6dcc74d1b36a4"},
 ]
 attrs = [
-    {file = "attrs-21.2.0-py2.py3-none-any.whl", hash = "md5:50e772bf1a75df648734eb0498383df6"},
+    {file = "attrs-21.4.0-py2.py3-none-any.whl", hash = "md5:ad5a10e4dd479f5b1f4b258acf661163"},
 ]
 colorama = [
     {file = "colorama-0.4.4-py2.py3-none-any.whl", hash = "md5:1dcd07acf2b1875ed09428e1ddf7e028"},
 ]
 lark = [
-    {file = "lark-1.0.0-py2.py3-none-any.whl", hash = "md5:481fa6b0c979feffda959b2e51709e7e"},
+    {file = "lark-1.1.0-py2.py3-none-any.whl", hash = "md5:a242854ad974b9907834d486846ffd42"},
 ]
 more-itertools = [
     {file = "more_itertools-8.12.0-py3-none-any.whl", hash = "md5:24ad863d3d4d6724d292c344e0e5ab76"},
@@ -206,7 +206,7 @@ py = [
     {file = "py-1.11.0-py2.py3-none-any.whl", hash = "md5:52d444d43edb21938fad6010a2134cc3"},
 ]
 pyparsing = [
-    {file = "pyparsing-3.0.6-py3-none-any.whl", hash = "md5:1184c1028b8211c060442ed847110e8b"},
+    {file = "pyparsing-3.0.7-py3-none-any.whl", hash = "md5:a133aa1a85795d8d7ba79e7601c419f6"},
 ]
 pytest = [
     {file = "pytest-5.4.3-py3-none-any.whl", hash = "md5:3e3d11ab0c0d3ffd87bd4aedd02afaef"},

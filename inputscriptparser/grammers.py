@@ -9,7 +9,7 @@ continued : _INDENT arglist _WS_INLINE? _NL
 
 command : CMDNAME
 
-CMDNAME : UCASE_LETTER ("-"|UCASE_LETTER|DIGIT)*
+CMDNAME : UCASE_LETTER (UCASE_LETTER|DIGIT|"-")*
 
 arglist : arg
         | arglist _WS_INLINE arg

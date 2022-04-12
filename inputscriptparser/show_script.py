@@ -28,7 +28,3 @@ def parse_options():
     )
     args = parser.parse_args()
     return args
-
-
-
-main()

@@ -1,7 +1,6 @@
 from lark import Lark
 from lark.exceptions import UnexpectedInput
 from lark.visitors import Interpreter, Transformer
-#from inputscriptparser.grammers import SCRIPT_GRAMMER
 from inputscriptparser.common import Keyword, flatten
 from os import path
 

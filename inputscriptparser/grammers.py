@@ -1,4 +1,4 @@
-SCRIPT_GRAMMER = '''?script : statement+
+SCRIPT_GRAMMER = '''script : statement+
 
 statement : line continued*
 
@@ -38,7 +38,7 @@ _WS_INLINE : WS_INLINE
 
 _NL : NEWLINE
 
-_INDENT : WS_INLINE
+_INDENT.-1 : WS_INLINE
 
 
 %import common.UCASE_LETTER

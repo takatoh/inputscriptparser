@@ -17,6 +17,7 @@ class Parser():
             print(f'Syntax error:  line = {e.line}  column = {e.column}\n')
             print(context)
             exit(1)
+#        print(tree.pretty())
 
 #        script = ScriptInterpreter().visit(tree)
         script = ScriptTransformer().transform(tree)

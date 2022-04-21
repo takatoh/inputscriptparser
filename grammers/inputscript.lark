@@ -30,9 +30,13 @@ KWORD : UCASE_LETTER (UCASE_LETTER|DIGIT)*
 boolean : true
         | false
 
-true : "true" | "yes" | "on"
+true : "true"
+     | "yes"
+     | "on"
 
-false : "false" | "no" | "off"
+false : "false"
+      | "no"
+      | "off"
 
 _WS_INLINE : WS_INLINE
 

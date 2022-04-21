@@ -1,11 +1,11 @@
-script : statement+
+script : _NL* statement+
 
 statement : line continued*
 
-line : command _WS_INLINE arglist _WS_INLINE? _NL
-     | command _WS_INLINE? _NL
+line : command _WS_INLINE arglist _WS_INLINE? _NL+
+     | command _WS_INLINE? _NL+
 
-continued : _INDENT arglist _WS_INLINE? _NL
+continued : _INDENT arglist _WS_INLINE? _NL+
 
 command : CMDNAME
 
@@ -38,7 +38,7 @@ _WS_INLINE : WS_INLINE
 
 _NL : NEWLINE
 
-_INDENT.-1 : WS_INLINE
+_INDENT : /(?<=\n) +/
 
 
 %import common.UCASE_LETTER
@@ -49,8 +49,6 @@ _INDENT.-1 : WS_INLINE
 %import common.WS_INLINE
 %import common.CPP_COMMENT
 
-COMMENT : WS_INLINE? CPP_COMMENT NEWLINE
-COMMENT_INLINE : WS_INLINE? CPP_COMMENT
+COMMENT : WS_INLINE? CPP_COMMENT
 
 %ignore COMMENT
-%ignore COMMENT_INLINE

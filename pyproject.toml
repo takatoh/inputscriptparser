@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "inputscriptparser"
-version = "0.9.0"
+version = "0.9.1"
 description = ""
 authors = ["takatoh <takatoh.m@gmail.com>"]
 include = ["grammers/inputscript.lark"]

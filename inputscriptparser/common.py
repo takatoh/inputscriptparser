@@ -8,6 +8,9 @@ class Keyword():
     def __repr__(self):
         return f'Keyword<{self.val}>'
 
+    def __eq__(self, other):
+        return self.val == other.val
+
 
 def flatten(lis):
     result = []

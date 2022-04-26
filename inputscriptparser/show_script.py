@@ -1,4 +1,4 @@
-from inputscriptparser.parsers import Parser
+from inputscriptparser import Parser
 from argparse import ArgumentParser
 
 

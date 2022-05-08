@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "inputscriptparser"
-version = "0.9.1"
-description = ""
+version = "1.0.0"
+description = "Parse script-style input data."
 authors = ["takatoh <takatoh.m@gmail.com>"]
 include = ["grammers/inputscript.lark"]
 

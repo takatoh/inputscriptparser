@@ -21,6 +21,8 @@ def main():
         for (cmd, args) in script:
             print('  COMMAND: ' + cmd)
             print('     ARGS: ' + repr(args))
+    elif options.parser == 'labeled':
+        print(script.pretty())
 
 
 def parse_options():

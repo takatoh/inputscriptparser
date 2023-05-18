@@ -19,7 +19,7 @@ def main():
 
 def parse_options():
     parser = ArgumentParser(
-        description='Example for InputScriptParser'
+        description='Example for Input Script Parser'
     )
     parser.add_argument(
         'input_file',

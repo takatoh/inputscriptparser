@@ -19,7 +19,7 @@ def main():
     if options.parser == 'script':
         print_input_script(script)
     elif options.parser == 'labeled':
-        print(script.pretty())
+        print_labeled_script(script)
 
 
 def parse_options():
@@ -47,3 +47,7 @@ def print_input_script(script):
     for (cmd, args) in script:
         print('  COMMAND: ' + cmd)
         print('     ARGS: ' + repr(args))
+
+
+def print_labeled_script(script):
+    print(script.pretty())

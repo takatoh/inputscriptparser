@@ -1,4 +1,4 @@
-from inputscriptparser import Parser
+from inputscriptparser import __version__, Parser
 from argparse import ArgumentParser
 
 
@@ -25,6 +25,12 @@ def parse_options():
         'input_file',
         metavar='INPUT_FILE',
         help='input script file'
+    )
+    parser.add_argument(
+        '-V', '--version',
+        action='version',
+        version=f'v{__version__}',
+        help='show version and exit'
     )
     options = parser.parse_args()
     return options

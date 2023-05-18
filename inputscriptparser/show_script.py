@@ -17,10 +17,7 @@ def main():
     script = parser.parse(input_data)
 
     if options.parser == 'script':
-        print('SCRIPT')
-        for (cmd, args) in script:
-            print('  COMMAND: ' + cmd)
-            print('     ARGS: ' + repr(args))
+        print_input_script(script)
     elif options.parser == 'labeled':
         print(script.pretty())
 
@@ -43,3 +40,10 @@ def parse_options():
     )
     args = parser.parse_args()
     return args
+
+
+def print_input_script(script):
+    print('SCRIPT')
+    for (cmd, args) in script:
+        print('  COMMAND: ' + cmd)
+        print('     ARGS: ' + repr(args))

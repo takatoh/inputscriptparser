@@ -26,5 +26,5 @@ def parse_options():
         metavar='INPUT_FILE',
         help='input script file'
     )
-    args = parser.parse_args()
-    return args
+    options = parser.parse_args()
+    return options

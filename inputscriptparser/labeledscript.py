@@ -22,6 +22,6 @@ class Parser():
             print(f'Syntax error:  line = {e.line}  column = {e.column}\n')
             print(context)
             exit(1)
-        print(tree.pretty())
+#        print(tree.pretty())
 
-#        return tree
+        return tree

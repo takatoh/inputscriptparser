@@ -5,7 +5,7 @@ from inputscriptparser.common import Keyword, flatten
 from os import path
 
 here = path.dirname(path.abspath(__file__))
-grammer_file = path.join(here, '../grammers/labeledscript.lark')
+grammer_file = path.join(here, '../../grammers/labeledscript.lark')
 with open(grammer_file) as f:
     SCRIPT_GRAMMER = f.read()
 

@@ -3,7 +3,10 @@ name = "inputscriptparser"
 version = "1.0.0"
 description = "Parse script-style input data."
 authors = ["takatoh <takatoh.m@gmail.com>"]
-include = ["grammers/inputscript.lark"]
+include = [
+    "grammers/inputscript.lark",
+    "grammers/labeledscript.lark"
+]
 
 [tool.poetry.dependencies]
 python = "^3.9"

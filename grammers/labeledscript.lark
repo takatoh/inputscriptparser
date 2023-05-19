@@ -12,7 +12,7 @@ line : command _WS_INLINE arglist _WS_INLINE? _NL+
 subline : subcommand _WS_INLINE arglist _WS_INLINE? _NL+
         | subcommand _WS_INLINE? _NL+
 
-continued : _INDENT arglist _WS_INLINE? _NL+
+continued : _WS_INLINE? arglist _WS_INLINE? _NL+
 
 command : CMDNAME
 
@@ -52,8 +52,6 @@ false : "false"
 _WS_INLINE : WS_INLINE
 
 _NL : NEWLINE
-
-_INDENT : /(?<=\n) +/
 
 
 %import common.UCASE_LETTER

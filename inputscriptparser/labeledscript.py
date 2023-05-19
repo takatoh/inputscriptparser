@@ -1,6 +1,6 @@
 from lark import Lark
 from lark.exceptions import UnexpectedInput
-from lark.visitors import Interpreter, Transformer
+from lark.visitors import Transformer
 from inputscriptparser.common import Keyword, flatten
 from os import path
 
@@ -22,9 +22,7 @@ class Parser():
             print(f'Syntax error:  line = {e.line}  column = {e.column}\n')
             print(context)
             exit(1)
-#        print(tree.pretty())
 
-#        return tree
         script = LabeledScriptTransformer().transform(tree)
         return script
 

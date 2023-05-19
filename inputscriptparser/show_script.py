@@ -1,5 +1,5 @@
 from inputscriptparser import __version__, Parser
-from inputscriptparser.labeledscript import Parser as LParser
+from inputscriptparser.parsers.labeledscript import Parser as LParser
 from argparse import ArgumentParser
 
 

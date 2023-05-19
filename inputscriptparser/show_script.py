@@ -1,4 +1,5 @@
 from inputscriptparser import __version__, Parser
+from inputscriptparser.labeledscript import Parser as LParser
 from argparse import ArgumentParser
 
 
@@ -8,13 +9,17 @@ def main():
     with open(options.input_file, 'r') as f:
         input_data = f.read()
 
-    parser = Parser()
+    if options.parser == 'script':
+        parser = Parser()
+    elif options.parser == 'labeled':
+        parser = LParser()
+
     script = parser.parse(input_data)
 
-    print('SCRIPT')
-    for (cmd, args) in script:
-        print('  COMMAND: ' + cmd)
-        print('     ARGS: ' + repr(args))
+    if options.parser == 'script':
+        print_input_script(script)
+    elif options.parser == 'labeled':
+        print_labeled_script(script)
 
 
 def parse_options():
@@ -32,5 +37,29 @@ def parse_options():
         version=f'v{__version__}',
         help='show version and exit'
     )
-    options = parser.parse_args()
-    return options
+    parser.add_argument(
+        '-p', '--parser',
+        action='store',
+        choices=[ 'script', 'labeled' ],
+        default='script',
+        help='specify parser. default to `script`'
+    )
+    args = parser.parse_args()
+    return args
+
+
+def print_input_script(script):
+    print('SCRIPT')
+    for (cmd, args) in script:
+        print('  COMMAND: ' + cmd)
+        print('     ARGS: ' + repr(args))
+
+
+def print_labeled_script(script):
+    print('SCRIPT')
+    for (cmd, args, substmnts) in script:
+        print('  COMMAND: ' + cmd)
+        print('    ARGS: ' + repr(args))
+        for (subcmd, subargs) in substmnts:
+            print('    SUBCOMMAND: ' + subcmd)
+            print('      ARGS: ' + repr(subargs))

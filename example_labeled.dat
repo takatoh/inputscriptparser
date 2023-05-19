@@ -1,0 +1,37 @@
+*TITLE       "Labeled Input"
+*LOAD-ENERGY
+*LOAD-SWAY
+*PREPARE
+**HISTORY    "LRBS"
+     "LRS160"         1.0
+     "LRS150"         1.0
+     "LRS140"         1.0
+**HISTORY    "OD"
+     "OD1"            1.0
+     "OD2"            1.0
+     "OD3"            1.0
+     "OD4"            1.0
+**HISTORY    "CLB"
+     "SWAY1"          1.0
+     "SWAY2"          1.0
+     "SWAY3"          1.0
+     "SWAY4"          1.0
+     "SWAY5"          1.0
+**HISTORY    "FRAME-HYSTERESIS"
+     "HYSTERESIS"     1.0
+     "LRBS"          -1.0
+     "OD"            -1.0
+     "CLB"           -1.0
+*PRINT
+**HISTORY
+     "LRBS"
+     "OD"
+     "CLB"
+     "FRAME-HISTERESIS"
+**FINAL-VALUE
+     "LRBS"
+     "OD"
+     "CLB"
+     "VISCOUS"
+     "FRAME-HYSTERESIS"
+*END

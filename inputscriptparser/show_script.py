@@ -50,4 +50,10 @@ def print_input_script(script):
 
 
 def print_labeled_script(script):
-    print(script.pretty())
+    print('SCRIPT')
+    for (cmd, args, substmnts) in script:
+        print('  COMMAND: ' + cmd)
+        print('    ARGS: ' + repr(args))
+        for (subcmd, subargs) in substmnts:
+            print('    SUBCOMMAND: ' + subcmd)
+            print('      ARGS: ' + repr(subargs))

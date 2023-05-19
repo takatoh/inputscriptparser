@@ -73,11 +73,11 @@ class LabeledScriptTransformer(Transformer):
 
     def command(self, tokens):
         (cmd,) = tokens
-        return cmd
+        return cmd.lstrip('*')
 
     def subcommand(self, tokens):
         (subcmd,) = tokens
-        return subcmd
+        return subcmd.lstrip('*')
 
     def arglist(self, tokens):
         return list(tokens)

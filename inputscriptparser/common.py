@@ -3,7 +3,7 @@ class Keyword():
         self.val = val
 
     def __str__(self):
-        return f'Keyword<{self.val}>'
+        return str(self.val)
 
     def __repr__(self):
         return f'<Keyword {self.val}>'

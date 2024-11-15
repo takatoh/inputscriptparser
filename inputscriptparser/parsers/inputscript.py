@@ -51,7 +51,7 @@ class ScriptTransformer(Transformer):
 
     def command(self, tokens):
         (cmd,) = tokens
-        return cmd
+        return str(cmd)
 
     def arglist(self, tokens):
         return list(tokens)

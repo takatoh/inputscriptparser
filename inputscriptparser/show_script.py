@@ -59,7 +59,7 @@ def print_labeled_script(script):
     print('SCRIPT')
     for (cmd, args, substmnts) in script:
         print('  COMMAND: ' + cmd)
-        print('    ARGS: ' + repr(args))
+        print('    ARGS:  ' + repr(args))
         for (subcmd, subargs) in substmnts:
             print('    SUBCOMMAND: ' + subcmd)
-            print('      ARGS: ' + repr(subargs))
+            print('      ARGS:     ' + repr(subargs))

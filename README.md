@@ -78,3 +78,11 @@ script = parser.parse(input_data)
 - `on` / `off`
 
 キーワードは、ラテン文字の大文字、数字から成り、必ず大文字で始まります。命令と似ていますが、行の先頭には現れないことで区別されます。
+
+## CLI tool `ispshow`
+
+`ispshow` コマンドは、入力データをパースし、結果（コマンドと引数）を見やすい形で表示します。
+
+    $ ispshow examples/inputscript.dat
+
+注記：入力データのなんの意味もない、ただの例です。

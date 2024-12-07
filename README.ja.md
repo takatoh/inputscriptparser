@@ -44,7 +44,7 @@ script = parser.parse(input_data)
 
 各命令を実行する評価器は利用者が用意する必要があります。
 
-## Syntax
+## Grammar
 
 文法は次の通りです。
 

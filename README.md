@@ -43,7 +43,7 @@ In the example above, the `script` parsing the input would be:
 
 The interpreter that executes each command must be provided by the user.
 
-## Syntax
+## Grammar
 
 The grammar is as follows
 

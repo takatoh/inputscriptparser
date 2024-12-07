@@ -4,22 +4,22 @@ from argparse import ArgumentParser
 
 
 def main():
-    options = parse_options()
+    args = parse_arguments()
 
-    if options.parser == 'script':
+    if args.parser == 'script':
         parser = SParser()
         print_script = print_input_script
-    elif options.parser == 'labeled':
+    elif args.parser == 'labeled':
         parser = LParser()
         print_script = print_labeled_script
 
-    with open(options.input_file, 'r') as f:
+    with open(args.input_file, 'r') as f:
         input_data = f.read()
     script = parser.parse(input_data)
     print_script(script)
 
 
-def parse_options():
+def parse_arguments():
     parser = ArgumentParser(
         description='Example for Input Script Parser'
     )

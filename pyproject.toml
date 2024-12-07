@@ -9,6 +9,8 @@ include = [
 ]
 readme = "README.md"
 license = "MIT"
+homepage = "https://github.com/takatoh/inputscriptparser"
+repository = "https://github.com/takatoh/inputscriptparser"
 
 [tool.poetry.dependencies]
 python = "^3.9"

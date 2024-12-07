@@ -6,20 +6,17 @@ from argparse import ArgumentParser
 def main():
     options = parse_options()
 
-    with open(options.input_file, 'r') as f:
-        input_data = f.read()
-
     if options.parser == 'script':
         parser = SParser()
+        print_script = print_input_script
     elif options.parser == 'labeled':
         parser = LParser()
+        print_script = print_labeled_script
 
+    with open(options.input_file, 'r') as f:
+        input_data = f.read()
     script = parser.parse(input_data)
-
-    if options.parser == 'script':
-        print_input_script(script)
-    elif options.parser == 'labeled':
-        print_labeled_script(script)
+    print_script(script)
 
 
 def parse_options():

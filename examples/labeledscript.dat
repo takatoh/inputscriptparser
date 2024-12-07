@@ -1,37 +1,26 @@
-*TITLE       "Labeled Input"
-*LOAD-ENERGY
-*LOAD-SWAY
-*PREPARE
-**HISTORY    "LRBS"
-     "LRS160"         1.0
-     "LRS150"         1.0
-     "LRS140"         1.0
-**HISTORY    "OD"
-     "OD1"            1.0
-     "OD2"            1.0
-     "OD3"            1.0
-     "OD4"            1.0
-**HISTORY    "CLB"
-     "SWAY1"          1.0
-     "SWAY2"          1.0
-     "SWAY3"          1.0
-     "SWAY4"          1.0
-     "SWAY5"          1.0
-**HISTORY    "FRAME-HYSTERESIS"
-     "HYSTERESIS"     1.0
-     "LRBS"          -1.0
-     "OD"            -1.0
-     "CLB"           -1.0
+*TITLE         "Labeled Input Example"  // Top lebel label.
+*OPTION                                 // Top lebel label too.
+**OPTION-1     off                      // Second lebel label.
+**OPTION-2     on
+*LOAD-FILE     "path/to/some/file"
+*COMPUTE
+**HISTORY      "TYPE-A"
+     "A1"        1.0                    // Continuation lines.
+     "A2"        1.0
+     "A3"        1.0
+**HISTORY      "TYPE-B"
+     "B1"        1.0
+     "B2"        1.0
+**HISTORY      "TOTAL"
+     "TYPE-A"    1.0
+     "TYPE-B"    1.0
 *PRINT
 **HISTORY
-     "LRBS"
-     "OD"
-     "CLB"
-     "FRAME-HISTERESIS"
+     "TYPE-A"
+     "TYPE-B"
+     "TOTAL"
 **FINAL-VALUE
-     "LRBS"
-     "OD"
-     "CLB"
-     "VISCOUS"
-     "FRAME-HYSTERESIS"
+     "TYPE-A"
+     "TYPE-B"
+     "TOTAL"
 *END

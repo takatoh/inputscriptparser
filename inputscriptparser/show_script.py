@@ -1,4 +1,4 @@
-from inputscriptparser import __version__, Parser
+from inputscriptparser import __version__, Parser as SParser
 from inputscriptparser.parsers.labeledscript import Parser as LParser
 from argparse import ArgumentParser
 
@@ -10,7 +10,7 @@ def main():
         input_data = f.read()
 
     if options.parser == 'script':
-        parser = Parser()
+        parser = SParser()
     elif options.parser == 'labeled':
         parser = LParser()
 

@@ -58,7 +58,7 @@ script = parser.parse(input_data)
 
 命令 `command` はラテン文字の大文字、数字、`-` から成り、必ず大文字で始まります。
 
-### Values
+### Argument values
 
 引数の値として、次の型が使用できます。
 

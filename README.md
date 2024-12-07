@@ -79,6 +79,51 @@ script = parser.parse(input_data)
 
 キーワードは、ラテン文字の大文字、数字から成り、必ず大文字で始まります。命令と似ていますが、行の先頭には現れないことで区別されます。
 
+### Interpreter
+
+`inputscriptparser.Interpreter` クラスは、評価器のベースとなるクラスです。
+評価器を実装するには、`inputscriptparser.Interpreter` を継承し、各命令に対応するメソッドを実装します。命令とメソッドの対応はつぎの規則で結び付けられます。
+
+1. 命令を小文字に変換
+2. `-` を `_` に変換
+3. 先頭に `_` を付加
+
+つまり、`NO-ARG-CMD` 命令は `_no_arg_cmd` メソッドに結び付けられます。
+
+最初の例の入力データの評価器はつぎのようになります。
+
+```Python
+from inputscriptparser import Interpreter
+
+class ExampleInterpreter(Interpreter):
+    def _cmd1(self, args):
+        self.state['CMD1'] = args[0]
+
+    def _cmd2(self, args):
+        self.state['CMD2'] = sum(args)
+
+    def _no_arg_cmd(self, args):
+        self.state['NO-ARG-CMD'] = 'This is a no-argument-command.'
+```
+
+入力を実行するには評価器のインスタンスを生成し、`rum` メソッドを呼び出します。
+
+```Python
+interpreter = ExampleInterpreter({})
+state = interpreter.run(script)
+for k, v in state.items():
+    print(f'{k} = {v}')
+```
+
+コンストラクタの引数は状態を保存するオブジェクト（ここでは空の `dict`）です。評価器の内部からは `self.state` としてアクセスできます。入力を実行したあとの状態オブジェクトは `run` メソッドの返り値として得られます。
+実行するとつぎの出力が得られます。
+
+```
+MD1 = example data
+CMD2 = 6.0
+NO-ARG-CMD = This is a no-argument-command.
+```
+
 ## CLI tool `ispshow`
 
 `ispshow` コマンドは、入力データをパースし、結果（コマンドと引数）を見やすい形で表示します。

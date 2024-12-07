@@ -7,6 +7,7 @@ include = [
     "grammers/inputscript.lark",
     "grammers/labeledscript.lark"
 ]
+readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.9"

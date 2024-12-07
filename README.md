@@ -79,7 +79,7 @@ script = parser.parse(input_data)
 
 キーワードは、ラテン文字の大文字、数字から成り、必ず大文字で始まります。命令と似ていますが、行の先頭には現れないことで区別されます。
 
-### Interpreter
+## Interpreter
 
 `inputscriptparser.Interpreter` クラスは、評価器のベースとなるクラスです。
 評価器を実装するには、`inputscriptparser.Interpreter` を継承し、各命令に対応するメソッドを実装します。命令とメソッドの対応はつぎの規則で結び付けられます。

@@ -8,6 +8,7 @@ include = [
     "grammers/labeledscript.lark"
 ]
 readme = "README.md"
+license = "MIT"
 
 [tool.poetry.dependencies]
 python = "^3.9"

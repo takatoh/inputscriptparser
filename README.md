@@ -130,3 +130,7 @@ NO-ARG-CMD = This is a no-argument-command.
 The CLI tool `ispshow` parses input data and displays the results (`command`s and `arg`s) in an easy-to-read format.
 
     $ ispshow examples/inputscript.dat
+
+## License
+
+MIT license.

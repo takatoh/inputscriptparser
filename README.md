@@ -106,7 +106,7 @@ class ExampleInterpreter(Interpreter):
         self.state['NO-ARG-CMD'] = 'This is a no-argument-command.'
 ```
 
-入力を実行するには評価器のインスタンスを生成し、`rum` メソッドを呼び出します。
+入力を実行するには評価器のインスタンスを生成し、`run` メソッドを呼び出します。
 
 ```Python
 interpreter = ExampleInterpreter({})
@@ -119,14 +119,14 @@ for k, v in state.items():
 実行するとつぎの出力が得られます。
 
 ```
-MD1 = example data
+CMD1 = example data
 CMD2 = 6.0
 NO-ARG-CMD = This is a no-argument-command.
 ```
 
 ## CLI tool `ispshow`
 
-`ispshow` コマンドは、入力データをパースし、結果（コマンドと引数）を見やすい形で表示します。
+`ispshow` コマンドは、入力データをパースし、結果（命令と引数）を見やすい形で表示します。
 
     $ ispshow examples/inputscript.dat
 

@@ -130,4 +130,6 @@ NO-ARG-CMD = This is a no-argument-command.
 
     $ ispshow examples/inputscript.dat
 
-注記：入力データのなんの意味もない、ただの例です。
+## License
+
+MIT license.

@@ -2,7 +2,7 @@
 
 A parser for script-style input data.
 
-"script-style" means assembling input data (the internal representation of the input data) by executing commands one at a time.
+"script-style" means assembling the internal representation of the input data by executing commands one at a time.
 A close example is the Dockerfile.
 
 ## Install
@@ -45,7 +45,7 @@ The interpreter that executes each command must be provided by the user.
 
 ## Grammar
 
-The grammar is as follows
+The grammar is as follows:
 
 1. A `script` representing the entire input data consists of one or more `statement`.
 2. A `statement` consists of a `command` and zero or more `arg`.
@@ -88,7 +88,7 @@ To implement an interpreter, extend `inputscriptparser.Interpreter` and implemen
 2. Replace `-` with `_`
 3. Prefix `_` to the beginning
 
-In short, the `NO-ARG-CMD` command is tied to the `_no_arg_cmd` method.
+In short, the `NO-ARG-CMD` command corresponds to the `_no_arg_cmd` method.
 
 The input data interpreter for the first example is as follows:
 

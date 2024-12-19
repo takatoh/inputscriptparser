@@ -48,8 +48,8 @@ The interpreter that executes each command must be provided by the user.
 The grammar is as follows:
 
 1. A `script` representing the entire input data consists of one or more `statement`.
-2. A `statement` consists of a `command` and zero or more `arg`.
-3. The `command` and each `arg` are separated by whitespace characters.
+2. A `statement` consists of a `command` and zero or more `argument`.
+3. The `command` and each `argument` are separated by whitespace characters.
 4. The `command` always begins at the beginning of a line. If a line begins with a space character, it is considered a continuation of the previous line.
 5. Lines from `//` to the end of the line are ignored as comments. Blank lines and lines containing only whitespace are also ignored.
 
@@ -127,7 +127,7 @@ NO-ARG-CMD = This is a no-argument-command.
 
 ## CLI tool `ispshow`
 
-The CLI tool `ispshow` parses input data and displays the results (`command`s and `arg`s) in an easy-to-read format.
+The CLI tool `ispshow` parses input data and displays the results (`command`s and `argument`s) in an easy-to-read format.
 
     $ ispshow examples/inputscript.dat
 

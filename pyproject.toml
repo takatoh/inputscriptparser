@@ -5,7 +5,8 @@ description = "A parser for script-style input data."
 authors = ["takatoh <takatoh.m@gmail.com>"]
 include = [
     "grammers/inputscript.lark",
-    "grammers/labeledscript.lark"
+    "grammers/labeledscript.lark",
+    "README.ja.md"
 ]
 readme = "README.md"
 license = "MIT"

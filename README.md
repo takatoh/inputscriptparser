@@ -55,7 +55,7 @@ The grammar is as follows:
 
 ### Command
 
-The `command` consists of Latin uppercase letters, digits, and `-`; and must begin with a uppercase letter.
+The `command` consists of latin uppercase letters, digits, and `-`; and must begin with a uppercase letter.
 
 ### Argument values
 
@@ -68,9 +68,9 @@ The following types can be used as argument values:
 
 Numbers do not distinguish between integers and real numbers. All numbers are real numbers.
 
-Strings are enclosed in `"` (double quotation marks).
+Strings are enclosed in `"` (double quotation marks) `"`.
 
-Boolean can be lowercase words that can be considered true or false.
+Boolean can be lowercase words that can be considered `True` or `False`.
 
 - `true` / `false`
 - `yes` / `no`
